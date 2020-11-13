@@ -1,43 +1,39 @@
 package com.cognixia.jump.corejava.BlackjackProject;
 
-import com.cognixia.jump.corejava.BlackjackProject.Suit.Values;
+import com.sun.jdi.Value;
 
 public class Card {
 
 	//Variable and identifier
-	private Suit.Values cardvalue;
-	private String suit;
+	private String cardSuit;
+	private Value cardValue;
 	
-	//Printed out suit and value of card
-	public String toString() {
-		return this.cardvalue.toString() + "-" + this.suit.toString();
-	
-	}
 	//Constructor
-	public Card(Values cardvalue, String suit) {
-		super();
-		this.cardvalue = cardvalue;
-		this.suit = suit;
+	public Card(Value cardvalue, String cardSuit) {
+		this.cardValue = cardvalue;
+		this.cardSuit = cardSuit;
 	}
-
+//Printed out suit and value of card
+	public String toString() {
+		return this.cardValue.toString() + "-" + this.cardSuit.toString(); 
+	}
+		
 	public Card() {
 		super();
-	}
 
-	public Suit.Values getCardvalue() {
-		return cardvalue;
+	
 	}
-
-	public void setCardvalue(Suit.Values cardvalue) {
-		this.cardvalue = cardvalue;
+	public String getCardSuit() {
+		return cardSuit;
 	}
-
-	public String getSuit() {
-		return suit;
+	public void setCardSuit(String cardSuit) {
+		this.cardSuit = cardSuit;
 	}
-
-	public void setSuit(String suit) {
-		this.suit = suit;
+	public Value getCardValue() {
+		return cardValue;
+	}
+	public void setCardValue(Value cardValue) {
+		this.cardValue = cardValue;
 	}
 	
 	

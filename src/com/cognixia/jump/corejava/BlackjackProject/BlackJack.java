@@ -23,10 +23,6 @@ public class BlackJack {
 
 	public static void main(String[] args) {
 
-		Suit playerDeck = new Suit();
-
-		Suit dealerDeck = new Suit();
-
 		boolean playerPlays = true;
 
 		boolean playerWins = true;
@@ -36,18 +32,21 @@ public class BlackJack {
 		Scanner input = new Scanner(System.in);
 
 		System.out.println(
-				"Welcome to Shanequa's Blackjack Casino! Would you like to play? Enter 1 = no  Or Enter 2 = yes");
+				"Welcome to Shanequa's Blackjack Casino! Would you like to play? Enter 1 = yes  Or Enter 2 = no");
 		int answer = input.nextInt();
 
 		if (answer == 1) {
 			System.out.println("Lets play!");
-			Dealer playingDeck = new Dealer();
-			playingDeck.generateFullDeck();
+			
 		}
 		else {
-			System.out.println("Thats unfortuante! Have a great rest of your day");
+			System.out.println("Thats unfortuante! Have a great rest of your day.");
 		}
+		input.close();
 		
-	}
+		
 
+
+	}
+	
 }
